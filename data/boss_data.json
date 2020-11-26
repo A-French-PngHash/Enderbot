@@ -1,0 +1,702 @@
+{
+  "1": {
+    "name": "Noobs Goat" ,
+    "level": 50 ,
+    "hp": 50 ,
+    "attack": 10 ,
+    "defense": 10
+  } ,
+  "2": {
+    "name": "Enervated Goat" ,
+    "level": 100 ,
+    "hp": 100 ,
+    "attack": 20 ,
+    "defense": 20
+  } ,
+  "3": {
+    "name": "Slime Miniscule" ,
+    "level": 250 ,
+    "hp": 250 ,
+    "attack": 50 ,
+    "defense": 50
+  } ,
+  "4": {
+    "name": "Slime Gooey" ,
+    "level": 500 ,
+    "hp": 500 ,
+    "attack": 100 ,
+    "defense": 100
+  } ,
+  "5": {
+    "name": "Massive Slime" ,
+    "level": 750 ,
+    "hp": 750 ,
+    "attack": 150 ,
+    "defense": 150
+  } ,
+  "6": {
+    "name": "Armored Tanuki" ,
+    "level": 1000 ,
+    "hp": 1000 ,
+    "attack": 200 ,
+    "defense": 220
+  } ,
+  "7": {
+    "name": "Metallic Tanuki" ,
+    "level": 1500 ,
+    "hp": 1500 ,
+    "attack": 250 ,
+    "defense": 275
+  } ,
+  "8": {
+    "name": "Goblin Rapide" ,
+    "level": 2000 ,
+    "hp": 2000 ,
+    "attack": 325 ,
+    "defense": 300
+  } ,
+  "9": {
+    "name": "Goblin Robber" ,
+    "level": 2500 ,
+    "hp": 2500 ,
+    "attack": 375 ,
+    "defense": 350
+  } ,
+  "10": {
+    "name": "Goblin Pillager " ,
+    "level": 3000 ,
+    "hp": 3000 ,
+    "attack": 450 ,
+    "defense": 400
+  } ,
+  "11": {
+    "name": " Biting Python " ,
+    "level": 3500 ,
+    "hp": 3500 ,
+    "attack": 500 ,
+    "defense": 450
+  } ,
+  "12": {
+    "name": " Venomous Python " ,
+    "level": 4000 ,
+    "hp": 4000 ,
+    "attack": 550 ,
+    "defense": 500
+  } ,
+  "13": {
+    "name": " Hungry Zombie " ,
+    "level": 4500 ,
+    "hp": 4700 ,
+    "attack": 600 ,
+    "defense": 600
+  } ,
+  "14": {
+    "name": " Enraged Zombie " ,
+    "level": 5000 ,
+    "hp": 5250 ,
+    "attack": 650 ,
+    "defense": 650
+  } ,
+  "15": {
+    "name": " Destructive Zombie " ,
+    "level": 5750 ,
+    "hp": 6000 ,
+    "attack": 700 ,
+    "defense": 700
+  } ,
+  "16": {
+    "name": " Agile Skeleton " ,
+    "level": 6250 ,
+    "hp": 6500 ,
+    "attack": 800 ,
+    "defense": 750
+  } ,
+  "17": {
+    "name": " Archer Skeleton " ,
+    "level": 7500 ,
+    "hp": 7500 ,
+    "attack": 850 ,
+    "defense": 800
+  } ,
+  "18": {
+    "name": " Orc Warrior " ,
+    "level": 8500 ,
+    "hp": 8500 ,
+    "attack": 950 ,
+    "defense": 850
+  } ,
+  "19": {
+    "name": " Giant Orc " ,
+    "level": 9250 ,
+    "hp": 9250 ,
+    "attack": 1025 ,
+    "defense": 950
+  } ,
+  "20": {
+    "name": " Royal Orc " ,
+    "level": 10000 ,
+    "hp": 10000 ,
+    "attack": 1100 ,
+    "defense": 1000
+  } ,
+  "21": {
+    "name": " Agile Spider " ,
+    "level": 11000 ,
+    "hp": 16500 ,
+    "attack": 1200 ,
+    "defense": 1100
+  } ,
+  "22": {
+    "name": " Venomous Spider " ,
+    "level": 12000 ,
+    "hp": 18000 ,
+    "attack": 1300 ,
+    "defense": 1200
+  } ,
+  "23": {
+    "name": " Giant Spider " ,
+    "level": 13000 ,
+    "hp": 19500 ,
+    "attack": 1425 ,
+    "defense": 1275
+  } ,
+  "24": {
+    "name": " Silver Wolf " ,
+    "level": 14000 ,
+    "hp": 21000 ,
+    "attack": 1475 ,
+    "defense": 1350
+  } ,
+  "25": {
+    "name": " Infernal Wolf " ,
+    "level": 15000 ,
+    "hp": 22500 ,
+    "attack": 1575 ,
+    "defense": 1450
+  } ,
+  "26": {
+    "name": " Griffon Griffant " ,
+    "level": 16000 ,
+    "hp": 24000 ,
+    "attack": 1650 ,
+    "defense": 1550
+  } ,
+  "27": {
+    "name": " Griffon Céleste " ,
+    "level": 17000 ,
+    "hp": 25500 ,
+    "attack": 1800 ,
+    "defense": 1700
+  } ,
+  "28": {
+    "name": " Gargouille Flying " ,
+    "level": 18000 ,
+    "hp": 27000 ,
+    "attack": 1850 ,
+    "defense": 1850
+  } ,
+  "29": {
+    "name": " Gargouille Infernale " ,
+    "level": 19000 ,
+    "hp": 28500 ,
+    "attack": 1900 ,
+    "defense": 1900
+  } ,
+  "30": {
+    "name": " Ogre Combattant " ,
+    "level": 20000 ,
+    "hp": 30000 ,
+    "attack": 2000 ,
+    "defense": 2000
+  } ,
+  "31": {
+    "name": " Giant Ogre " ,
+    "level": 21000 ,
+    "hp": 31500 ,
+    "attack": 2100 ,
+    "defense": 2100
+  } ,
+  "32": {
+    "name": " Titanic Ogre " ,
+    "level": 22000 ,
+    "hp": 33000 ,
+    "attack": 2200 ,
+    "defense": 2200
+  } ,
+  "33": {
+    "name": " Nocture Elf " ,
+    "level": 23000 ,
+    "hp": 34500 ,
+    "attack": 2300 ,
+    "defense": 2400
+  } ,
+  "34": {
+    "name": " Demonic Elf " ,
+    "level": 24000 ,
+    "hp": 36000 ,
+    "attack": 2400 ,
+    "defense": 2500
+  } ,
+  "35": {
+    "name": " Aquatic Sitene " ,
+    "level": 25000 ,
+    "hp": 37500 ,
+    "attack": 2500 ,
+    "defense": 2550
+  } ,
+  "36": {
+    "name": " Singing Mermaid " ,
+    "level": 26000 ,
+    "hp": 39000 ,
+    "attack": 2600 ,
+    "defense": 2650
+  } ,
+  "37": {
+    "name": " Enchanting Mermaid " ,
+    "level": 27000 ,
+    "hp": 40500 ,
+    "attack": 2700 ,
+    "defense": 2800
+  } ,
+  "38": {
+    "name": " Hitting Ghost " ,
+    "level": 28000 ,
+    "hp": 42000 ,
+    "attack": 2900 ,
+    "defense": 2850
+  } ,
+  "39": {
+    "name": " Ghostoplasm Ghost " ,
+    "level": 29000 ,
+    "hp": 43500 ,
+    "attack": 3250 ,
+    "defense": 3250
+  } ,
+  "40": {
+    "name": " Vengeful Ghost " ,
+    "level": 30000 ,
+    "hp": 45000 ,
+    "attack": 3500 ,
+    "defense": 3000
+  } ,
+  "41": {
+    "name": " Centaur Archer " ,
+    "level": 31000 ,
+    "hp": 62000 ,
+    "attack": 4500 ,
+    "defense": 4500
+  } ,
+  "42": {
+    "name": " Centaur Precis " ,
+    "level": 32000 ,
+    "hp": 64000 ,
+    "attack": 4750 ,
+    "defense": 4750
+  } ,
+  "43": {
+    "name": " Flying Harpy " ,
+    "level": 33000 ,
+    "hp": 66000 ,
+    "attack": 5000 ,
+    "defense": 4900
+  } ,
+  "44": {
+    "name": " Windy Harpy " ,
+    "level": 34000 ,
+    "hp": 68000 ,
+    "attack": 5400 ,
+    "defense": 5200
+  } ,
+  "45": {
+    "name": " Flying Fairy " ,
+    "level": 35000 ,
+    "hp": 70000 ,
+    "attack": 5500 ,
+    "defense": 5700
+  } ,
+  "46": {
+    "name": " Enchanted Fairy " ,
+    "level": 36000 ,
+    "hp": 72000 ,
+    "attack": 5700 ,
+    "defense": 6000
+  } ,
+  "47": {
+    "name": " Magic Fairy " ,
+    "level": 37000 ,
+    "hp": 74000 ,
+    "attack": 6200 ,
+    "defense": 6400
+  } ,
+  "48": {
+    "name": " Invisible Specter " ,
+    "level": 38000 ,
+    "hp": 76000 ,
+    "attack": 6500 ,
+    "defense": 6500
+  } ,
+  "49": {
+    "name": " Intangible Specter " ,
+    "level": 39000 ,
+    "hp": 78000 ,
+    "attack": 6750 ,
+    "defense": 6750
+  } ,
+  "50": {
+    "name": " Demonic Specter " ,
+    "level": 40000 ,
+    "hp": 80000 ,
+    "attack": 7000 ,
+    "defense": 7000
+  } ,
+  "51": {
+    "name": " Biting Vampire " ,
+    "level": 41000 ,
+    "hp": 82000 ,
+    "attack": 7400 ,
+    "defense": 7200
+  } ,
+  "52": {
+    "name": " Bloody Vampire " ,
+    "level": 42000 ,
+    "hp": 84000 ,
+    "attack": 7600 ,
+    "defense": 7400
+  } ,
+  "53": {
+    "name": " Stony Golem " ,
+    "level": 43000 ,
+    "hp": 86000 ,
+    "attack": 7750 ,
+    "defense": 7600
+  } ,
+  "54": {
+    "name": " Golem Mass if " ,
+    "level": 44000 ,
+    "hp": 88000 ,
+    "attack": 8000 ,
+    "defense": 7750
+  } ,
+  "55": {
+    "name": " Titanic Golem " ,
+    "level": 45000 ,
+    "hp": 90000 ,
+    "attack": 8250 ,
+    "defense": 8000
+  } ,
+  "56": {
+    "name": " Underground Minotaur " ,
+    "level": 46000 ,
+    "hp": 92000 ,
+    "attack": 8350 ,
+    "defense": 8350
+  } ,
+  "57": {
+    "name": " Labyrinthic Minotaur " ,
+    "level": 47000 ,
+    "hp": 94000 ,
+    "attack": 8500 ,
+    "defense": 8500
+  } ,
+  "58": {
+    "name": " Gigantic Minotaur " ,
+    "level": 48000 ,
+    "hp": 96000 ,
+    "attack": 8750 ,
+    "defense": 8750
+  } ,
+  "59": {
+    "name": " Dullahan Knight " ,
+    "level": 49000 ,
+    "hp": 98000 ,
+    "attack": 9250 ,
+    "defense": 8850
+  } ,
+  "60": {
+    "name": " Demonic Dullahan " ,
+    "level": 50000 ,
+    "hp": 100000 ,
+    "attack": 10000 ,
+    "defense": 10000
+  } ,
+  "61": {
+    "name": " Enchanting Shaman " ,
+    "level": 52000 ,
+    "hp": 104000 ,
+    "attack": 13000 ,
+    "defense": 13500
+  } ,
+  "62": {
+    "name": " Voodoo Shaman " ,
+    "level": 54000 ,
+    "hp": 108000 ,
+    "attack": 15750 ,
+    "defense": 16000
+  } ,
+  "63": {
+    "name": " Sea Serpent " ,
+    "level": 56000 ,
+    "hp": 112000 ,
+    "attack": 16500 ,
+    "defense": 16500
+  } ,
+  "64": {
+    "name": "Ocean Snake" ,
+    "level": 58000 ,
+    "hp": 116000 ,
+    "attack": 17000 ,
+    "defense": 17000
+  } ,
+  "65": {
+    "name": "Sharp Mower" ,
+    "level": 60000 ,
+    "hp": 120000 ,
+    "attack": 17750 ,
+    "defense": 17500
+  } ,
+  "66": {
+    "name": "Deadly Mower" ,
+    "level": 62000 ,
+    "hp": 124000 ,
+    "attack": 18500 ,
+    "defense": 18000
+  } ,
+  "67": {
+    "name": "Final Mower" ,
+    "level": 64000 ,
+    "hp": 128000 ,
+    "attack": 19500 ,
+    "defense": 18750
+  } ,
+  "68": {
+    "name": "Ice Liche" ,
+    "level": 66000 ,
+    "hp": 132000 ,
+    "attack": 20500 ,
+    "defense": 21000
+  } ,
+  "69": {
+    "name": "Refrigerating Liche" ,
+    "level": 68000 ,
+    "hp": 136000 ,
+    "attack": 21250 ,
+    "defense": 22000
+  } ,
+  "70": {
+    "name": "Zero-Absolute Liche" ,
+    "level": 70000 ,
+    "hp": 140000 ,
+    "attack": 22000 ,
+    "defense": 23000
+  } ,
+  "71": {
+    "name": "Demonic Demon" ,
+    "level": 72000 ,
+    "hp": 144000 ,
+    "attack": 23500 ,
+    "defense": 23500
+  } ,
+  "72": {
+    "name": "Hell Demon" ,
+    "level": 74000 ,
+    "hp": 148000 ,
+    "attack": 24250 ,
+    "defense": 24250
+  } ,
+  "73": {
+    "name": " Marine Hydra " ,
+    "level": 76000 ,
+    "hp": 152000 ,
+    "attack": 25000 ,
+    "defense": 25000
+  } ,
+  "74": {
+    "name": " Ocean Hydra " ,
+    "level": 78000 ,
+    "hp": 156000 ,
+    "attack": 26000 ,
+    "defense": 26000
+  } ,
+  "75": {
+    "name": " Hitting Spirit " ,
+    "level": 80000 ,
+    "hp": 160000 ,
+    "attack": 27500 ,
+    "defense": 27000
+  } ,
+  "76": {
+    "name": " Excited Spirit " ,
+    "level": 82000 ,
+    "hp": 164000 ,
+    "attack": 31000 ,
+    "defense": 28000
+  } ,
+  "77": {
+    "name": " Final Spirit " ,
+    "level": 84000 ,
+    "hp": 168000 ,
+    "attack": 30000 ,
+    "defense": 29000
+  } ,
+  "78": {
+    "name": " Fish Chimera " ,
+    "level": 86000 ,
+    "hp": 172000 ,
+    "attack": 31000 ,
+    "defense": 31000
+  } ,
+  "79": {
+    "name": " Snake Chimera " ,
+    "level": 88000 ,
+    "hp": 176000 ,
+    "attack": 33500 ,
+    "defense": 33500
+  } ,
+  "80": {
+    "name": " Lion Chimera " ,
+    "level": 90000 ,
+    "hp": 180000 ,
+    "attack": 40000 ,
+    "defense": 40000
+  } ,
+  "81": {
+    "name": " Drake " ,
+    "level": 100000 ,
+    "hp": 250000 ,
+    "attack": 45000 ,
+    "defense": 45000
+  } ,
+  "82": {
+    "name": " Wyvern " ,
+    "level": 110000 ,
+    "hp": 275000 ,
+    "attack": 50000 ,
+    "defense": 50000
+  } ,
+  "83": {
+    "name": "Behemoth" ,
+    "level": 120000 ,
+    "hp": 300000 ,
+    "attack": 55000 ,
+    "defense": 55000
+  } ,
+  "84": {
+    "name": "Archmage from beyond the grave" ,
+    "level": 130000 ,
+    "hp": 325000 ,
+    "attack": 60000 ,
+    "defense": 60000
+  } ,
+  "85": {
+    "name": "White Tiger" ,
+    "level": 140000 ,
+    "hp": 350000 ,
+    "attack": 65000 ,
+    "defense": 65000
+  } ,
+  "86": {
+    "name": "Purple Phoenix" ,
+    "level": 150000 ,
+    "hp": 375000 ,
+    "attack": 70000 ,
+    "defense": 70000
+  } ,
+  "87": {
+    "name": "Stone Colossus" ,
+    "level": 160000 ,
+    "hp": 400000 ,
+    "attack": 80000 ,
+    "defense": 80000
+  } ,
+  "88": {
+    "name": " Dragon Skeleton " ,
+    "level": 170000 ,
+    "hp": 425000 ,
+    "attack": 90000 ,
+    "defense": 90000
+  } ,
+  "89": {
+    "name": " Eight Headed Serpent " ,
+    "level": 180000 ,
+    "hp": 450000 ,
+    "attack": 100000 ,
+    "defense": 100000
+  } ,
+  "90": {
+    "name": " Aphrodite " ,
+    "level": 190000 ,
+    "hp": 475000 ,
+    "attack": 110000 ,
+    "defense": 110000
+  } ,
+  "91": {
+    "name": " Ares" ,
+    "level": 200000 ,
+    "hp": 500000 ,
+    "attack": 120000 ,
+    "defense": 120000
+  } ,
+  "92": {
+    "name": " Athena " ,
+    "level": 210000 ,
+    "hp": 550000 ,
+    "attack": 130000 ,
+    "defense": 130000
+  } ,
+  "93": {
+    "name": " Artemis" ,
+    "level": 220000 ,
+    "hp": 600000 ,
+    "attack": 140000 ,
+    "defense": 140000
+  } ,
+  "94": {
+    "name": "Poseidon" ,
+    "level": 230000 ,
+    "hp": 650000 ,
+    "attack": 150000 ,
+    "defense": 150000
+  } ,
+  "95": {
+    "name": "Hades" ,
+    "level": 240000 ,
+    "hp": 700000 ,
+    "attack": 160000 ,
+    "defense": 160000
+  } ,
+  "96": {
+    "name": " Zeus" ,
+    "level": 250000 ,
+    "hp": 750000 ,
+    "attack": 170000 ,
+    "defense": 170000
+  } ,
+  "97": {
+    "name": "Gaia" ,
+    "level": 260000 ,
+    "hp": 775000 ,
+    "attack": 180000 ,
+    "defense": 180000
+  } ,
+  "98": {
+    "name": "Cronos" ,
+    "level": 270000 ,
+    "hp": 800000 ,
+    "attack": 190000 ,
+    "defense": 190000
+  } ,
+  "99": {
+    "name": " Chaos" ,
+    "level": 285000 ,
+    "hp": 900000 ,
+    "attack": 200000 ,
+    "defense": 200000
+  } ,
+  "100": {
+    "name": "EnderBot" ,
+    "level": 999999 ,
+    "hp": 9999999 ,
+    "attack": 999999 ,
+    "defense": 999999
+  }
+}

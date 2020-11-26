@@ -1,13 +1,20 @@
 import values
 import math
 import player
+import discord
+import datetime
+import mysql.connector
 
 
 def format_numbers(numbers):
     """
-    This function take as input a dictionary like this one : ["stone" : 1000, "Ruby" : 1000000]
-    It outputs the same dictionary with the numbers as strings and with the Enderbot Number format
-    where K stand for thousand, M for millions, G for billions, T for trillions, P for quadrillions
+
+    INPUT:
+        - A dictionary formatted this one : {"stone" : 1000, "Ruby" : 1000000}
+
+    OUTPUT:
+        - dictionary : It outputs the same dictionary with the numbers as strings and with the Enderbot Number format
+            where K stand for thousand, M for millions, G for billions, T for trillions, P for quadrillions.
     """
     output = {}
     for (key, element) in numbers.items():
@@ -19,7 +26,7 @@ def format_numbers(numbers):
             output[key] = str(element)
             continue
         for i in range(len(zeros) - 1):
-            if zeros[i] <= number <= zeros[i + 1]:
+            if zeros[i] <= number < zeros[i + 1]:
                 number = str(round(number/(zeros[i]/100))/100) + symbol[i]
                 output[key] = number
                 break
@@ -29,13 +36,18 @@ def format_numbers(numbers):
 def convert_resources_to_db_name(resources):
     """
     To prevent bugs and to organize things a bit more,
-    in the code we only manipulate resources name as they are in the database.
-    This function take as input a list of resources and return a list of resources with the appropriate names.
+        in the code we only manipulate resources name as they are in the database.
+
+    INPUT:
+        - resources : A list of resources
+
+    OUTPUT:
+         - list : The list of resources with the appropriate names.
     """
     for (i, name) in enumerate(resources):
         if name.lower() == "perfect prism" or name.lower() == "perfect" or name.lower() == "prism":
             resources[i] = "pp"
-        elif name.lower() == "anti matter" or name.lower() == "anti" or name.lower() == "matter":
+        elif name.lower() == "anti matter" or name.lower() == "anti" or name.lower() == "matter" or name.lower() == "antimatter":
             resources[i] = "am"
         else:
             resources[i] = name.lower()
@@ -47,9 +59,16 @@ def convert_resources_to_db_name(resources):
 
 def convert_resources_to_user_name(resources):
     """
-    This will convert the list of resources taken as argument to more beautiful way of writing it.
-    For example pp will become Perfect Prism and ruby will become Ruby.
+    This function will convert the list of resources taken as argument to more beautiful way of writing it.
+    For example "pp" will become "Perfect Prism" and "ruby" will become "Ruby".
     The name in the list taken as parameter must be as is it stored in the database.
+
+    INPUT:
+        - Resources : A list of resources
+
+    OUTPUT:
+        - list : The resources but writen better
+
     """
     for (i, name) in enumerate(resources):
         resources[i] = values.resources_name_for_user[values.resources_name_in_database.index(name)]
@@ -58,43 +77,53 @@ def convert_resources_to_user_name(resources):
 
 def level_for(xp: int):
     """
-    Take as input the number of xp the user has.
-    Return the level corresponding to that number of xp.
-    The formula is exponential and the max level is level 99999.
+    Calculate the level depending of the xp. The formula is exponential and the max level is level 99999.
+
+    INPUT:
+        - xp:int : The number of xp the user has.
+
+    OUTPUT:
+        - int : The level corresponding to that number of xp
     """
-    level = (1.0000001 / ((xp + 1e7 + 100) / 1e12) - 100001) * - 1
+
+    # level = (1.0000001 / ((xp + 1e7 + 100) / 1e12) - 100001) * - 1 <-- This formula work too. It seems not to be the official
+    level = 1+xp/(100+(1+xp/100)/1000)
     return math.floor(level)
 
 
 def get_resources_values_and_name_for(resources):
     """
-    When the user input resources, for exemple in a trade, we use *arg to recolt them which mean that we need to
+    When the user input resources, for example in a trade, we use *arg to collect them which mean that we need to
     transform this input into a more usable "thing" to manipulate it in the code.
     This function do this. It also convert the resources name's to db_name automatically.
-    It take as argument a list of resources + their values formatted like that :
-    ["stone", "65", "ruby", "9000"]
-    It return a dictionary whose key are the resources name's and value the number of resources.
+
+    INPUT :
+        - resources : a list of resources + their values formatted like that : ["stone", "65", "ruby", "9000"]
+
+    OUPUT :
+        - dictionary : A dictionary whose key are the resources name's and value the number of resources.
     """
-    names = [resources[i * 2] for i in range(int(len(resources) / 2))]
-    names = convert_resources_to_db_name(names)
-    resources_dictionary = {}
-    n = 0
-    for i in range(int(len(resources) / 2)):
-        resources_dictionary[names[i]] = int(resources[n + 1])
-        n += 2
-    return resources_dictionary
+    resources_dict = {resources[i]:int(resources[i+1]) for i in range(0, len(resources), 2)}
+    return resources_dict
 
 
 def get_trade_recap_for(resources):
     """
-    When there is a trade a recap of the trade is displayed for the users.
-    This functions generate a part of the recap. It takes as input a dictionary of resources formatted like this :
-    ["Stone" : 65, "ruby" : 57].
-    In this example it would return : "[65 <:stone:720659627934613626> Stone | 57 <:ruby:720659626260955196> Ruby]".
-    If the list of resources is empty it will return "**∅ Nothing**".
-    Note : If the resources name's are not formatted in a user format, it automaticaly convert them as this is suposed
+    When there is a trade, a recap of the trade is displayed for the users.
+    This functions generate a part of this recap.
+
+    INPUT:
+        - resources : A dictionary of resources formatted like this : ["Stone" : 65, "ruby" : 57].
+
+    OUTPUT :
+        - str : The part of the recap.
+            In this example it would return : "[65 <:stone:720659627934613626> Stone | 57 <:ruby:720659626260955196> Ruby]".
+            If the list of resources is empty it will return "**∅ Nothing**".
+
+    Note : If the resources name's are not formatted in a user format, it automatically convert them as this is supposed
     to appear on the recap message.
     """
+
     if len(resources) == 0:
         return "**∅ Nothing**"
     return_string = "["
@@ -107,14 +136,124 @@ def get_trade_recap_for(resources):
     return return_string
 
 
-def player_has_resources(user, resources):
+def get_mine_embed(resources_dropped, user, mana_used, xp_dropped):
     """
-    Verify if a given player has the resources in his inventory.
-    It take as input a player object and a dictionary.
-    The dictionary "resources" is formated like that : {"stone": 65, "ruby": 57 }
-    Resources name's need to be in the db format.
+    After doing a mine, the user get an embed which said how many resources he won etc...
+    This function return this embed.
+
+    INPUT:
+        - resources_dropped : The list of the resources dropped
+        - user : The player object in order to display additional data
+        - mana_used : The number of mana_used in this mine
+        - xp_dropped : The number of xp dropped
+
+    OUTPUT:
+        - The embed generated
     """
-    for (key, value) in resources.items():
-        if int(user.inventory.resources[key]) < int(value):
-            return False
-    return True
+    embed = discord.Embed(color=0xff9200)
+    embed.set_author(name=user.author.name, icon_url=user.author.avatar_url)
+    resources_gained = ""
+    for i in values.resources_name_in_database:
+        name_as_user = convert_resources_to_user_name([i])[0]
+        if resources_dropped[i] != 0:
+            resources_gained += values.emojis[name_as_user] + " " + name_as_user + ": " + add_space_number(resources_dropped[i]) + "\n"
+    embed.add_field(name = "Resources mined", value=resources_gained, inline=True)
+    embed.add_field(name = "Information", value=f"{values.emojis['mana']} Mana used: {add_space_number(mana_used)}\n"
+                                                f"{values.emojis['mana']} Mana remaining: {add_space_number(math.floor(user.mana))}\n"
+                                                f"{values.emojis['xp']} Exp Gained: {add_space_number(xp_dropped)}\n"
+                                                f"{values.emojis['pickaxe']} Maximum theoretical critical: {add_space_number(user.critical)}", inline=True)
+    return embed
+
+
+def add_space_number(number):
+    """A simple function to add a space every three 0 for exemple :
+    '14376' -> '14 376'
+
+    INPUT:
+        - number : The string or int to convert.
+
+    OUPUTS:
+        - The result of the query"""
+
+    def split(string):
+        while string:
+            yield string[:3]
+            string = string[3:]
+
+    return " ".join(list(split(str(number)[::-1])))[::-1]
+
+
+def set_value_for(player, new_value, name, cnx):
+    """This basic function can execute simple queries onto players objects in the database.
+
+    INPUTS :
+        - player : A player object used to add a WHERE clause in the query
+        - new_value : The new value to set the column to
+        - name : The name of the column.
+        - cnx : The connection to the database.
+    """
+
+    query = f"""
+    UPDATE Player
+    SET {name} = {new_value}
+    WHERE id = {player.id};"""
+    execute_query(cnx, query)
+
+
+def execute_query(cnx, query):
+    """Use to execute queries to the database.
+
+    INPUT :
+        - cnx : A connection to the mysql database to execute queries
+        - query : The query itself."""
+    cursor = cnx.cursor(dictionary=True)
+    print(query)
+    cursor.execute(query)
+    results = None
+    try:
+        results = cursor.fetchall()
+    except mysql.connector.Error as err:
+        pass
+    cursor.close()
+    return results
+
+
+async def add_validation_emojis_to_message(message : discord.Message):
+    """This function add the ✅ and ❌ reactions to the message.
+    INPUT:
+        - message : The message on which the program has to add the reactions.
+    """
+
+    await message.add_reaction("✅")
+    await message.add_reaction("❌")
+
+
+def get_remaining_time(end_date) -> (int, int):
+    """
+    This function return the minutes and the second that are left until the end_date.
+
+    INPUT:
+        - end_date : The end time
+
+    OUTPUT:
+        - int : The minutes remaining
+        - int : The seconds remaining
+    """
+    interval_between_release = end_date - datetime.datetime.today()
+    if interval_between_release.total_seconds() < 0:
+        return (0, 0)
+    minutes = interval_between_release.seconds // 60
+    seconds = interval_between_release.seconds % 60
+    return minutes, seconds
+
+def reset_account(cnx, id):
+    """
+    Called when needing to reset the account
+
+    INPUT :
+        - id : The id of the account to reset
+    """
+    cursor = cnx.cursor()
+    cursor.callproc("drop_player", (id,))
+    cursor.callproc("add_new_player", (id,))
+    cursor.close()

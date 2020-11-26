@@ -62,3 +62,7 @@ As said earlier this table contain the levels of the tools a user has.
 
 # Stored procedures
 In the database we have 1 stored procedure which is used to add a new player. It is called add_new_player and take as input the id of the player. This procedure uses transactions so there should not be any problem during the creation of a new player.
+
+# Creating the database
+Now that you know everything about the database, it is time to create it !
+You can find the sql commands to execute in the database.sql file.

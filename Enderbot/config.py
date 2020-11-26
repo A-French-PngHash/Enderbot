@@ -1,3 +1,4 @@
-word = "password"
+password = "password"
 user = "root"
-ip = "MacBook-Pro-de-Titouan.local"
+ip = "localhost"
+database_name = ""
